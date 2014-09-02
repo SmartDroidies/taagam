@@ -1,13 +1,15 @@
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<!--Body content-->
-			<ul>
+<div class="row">
+	<div class="col-md-12">
+		<!--Body content-->
+		<div class="list-group">
+			<ul class="list-unstyled table-striped">
 				<li ng-repeat="category in categories">
-					<a href="#/category/{{category[2]}}">{{category[1]}}</a>
-					<p>{{category[3]}}</p>
+					<a href="#/category/{{category[2]}}" class="list-group-item">
+						<h4 class="list-group-item-heading">{{category[1]}}</h4>
+						<p class="list-group-item-text">{{category[3]}}</p>
+					</a>
 				</li>	
 			</ul>
-		</div>
+		</div>	
 	</div>
 </div>
