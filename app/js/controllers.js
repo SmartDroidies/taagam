@@ -18,3 +18,13 @@ taagamControllers.controller('CtgryItemsCtrl', ['$scope', '$routeParams', '$http
 	  $scope.category = $routeParams.category;
     });
   }]);
+
+taagamControllers.controller('ItemDetailCtrl', ['$scope', '$routeParams', '$http',
+  function($scope, $routeParams, $http) {
+	$http.get('http://smartdroidies.com/api/thuligal.php?service=detail&ctgr=' + $routeParams.category + "&id="+ $routeParams.id).success(function(data) {
+      $scope.item = data;
+    });
+}]);
+
+  
+  

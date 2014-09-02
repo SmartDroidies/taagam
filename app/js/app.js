@@ -18,6 +18,10 @@ taagamApp.config(['$routeProvider',
         templateUrl: 'partials/category-items.html',
         controller: 'CtgryItemsCtrl'
       }).
+      when('/item/:category/:id', {
+        templateUrl: 'partials/item.html',
+        controller: 'ItemDetailCtrl'
+      }).
       otherwise({
         redirectTo: '/categories'
       });

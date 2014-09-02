@@ -1,15 +1,13 @@
-TBD: detail view for <span>{{category}}</span>
-
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12">
-			<!--Body content-->
-			<ul>
-				<li ng-repeat="item in items">
-					<a href="#/item/{{item[0]}}">{{item[1]}}</a>
-					<p>{{item[2]}}</p>
-				</li>	
-			</ul>
+		<div class="col-md-12 padless">
+			<table class="table table-striped">
+				<tr ng-repeat="item in items">
+					<td>
+						<a href="#/item/{{category}}/{{item[0]}}">{{item[1]}}</a>
+					</td>
+				</tr>
+			</table>
 		</div>
 	</div>
 </div>
