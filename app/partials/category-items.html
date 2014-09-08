@@ -1,13 +1,12 @@
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12 padless">
-			<table class="table table-striped">
-				<tr ng-repeat="item in items">
-					<td>
-						<a href="#/item/{{category}}/{{item[0]}}">{{item[1]}}</a>
-					</td>
-				</tr>
-			</table>
-		</div>
+<div class="row">
+	<div id="thuligal" class="col-md-12 padless">
+		<ul class="list-unstyled list-stripped">
+			<li ng-repeat="item in items">
+				<a href="#/item/{{category}}/{{item[0]}}" class="list-group-item">
+					<div class="thuli">{{item[1]}}</div>
+				</a>
+			</li>	
+		</ul>
 	</div>
 </div>
+

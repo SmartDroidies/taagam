@@ -15,17 +15,28 @@
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <a id="head.title" class="navbar-brand i18n"><h2>Tamil Taagam</h2></a>
+      <div class="container-fluid">
+		<div class="navbar-header">
+			<img alt="Tamil Taagam" src="images/taagam.png" class="navbar-brand app-logo"/> 
+			<a id="head.title" class="navbar-brand app-head i18n"><h2>Tamil Taagam</h2></a>
         </div>
       </div>
     </nav>
-	<div ng-view class="container"></div>
-	<div class="footer">
-      <div class="container">
+	<div class="container-fluid content">
+		<div id="loadingWidget" class="row-fluid ui-corner-all">
+			<div class="loadingContent">
+				<img alt="Loading  Content" src="images/ajax-loader.gif" /> 
+			</div>
+		</div>
+		<div id="popup-error" class="row-fluid ui-corner-all error">
+			<p id="popup-content" class="error-content"></p>
+		</div>				
+	</div>	
+	<div ng-view class="container-fluid"></div>
+	<!--div class="footer">
+      <div class="container-fluid content">
         <p class="text-muted">SmartDroidies</p>
       </div>
-    </div>	
+    </div-->	
 </body>
 </html>
