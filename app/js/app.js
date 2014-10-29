@@ -1,8 +1,7 @@
 'use strict';
 /* App Module */
 var taagamApp = angular.module('taagamApp', [
-  'ngRoute',
-  'taagamControllers'
+  'ngRoute', 'taagamControllers', 'taagamServices'
 ]);
 
 

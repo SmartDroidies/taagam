@@ -4,9 +4,13 @@
 
 var taagamControllers = angular.module('taagamControllers', []);
 
-taagamControllers.controller('CtgryListCtrl', ['$scope', '$http',
-  function($scope, $http) {
+taagamControllers.controller('CtgryListCtrl', ['$scope', 'Category',
+  function($scope, Category) {
 	  $('#loadingWidget').show();
+      $scope.categories = Category.query();
+	  $('#loadingWidget').hide();
+	  $('#popup-error').hide();
+	/*
 	  $http.get('http://smartdroidies.com/api/thuligal.php?service=ctgry').success(function(data) {
 		$scope.categories = data;
 		$('#loadingWidget').hide();
@@ -16,6 +20,7 @@ taagamControllers.controller('CtgryListCtrl', ['$scope', '$http',
 		$('#popup-content').html(jQuery.i18n.prop("error.network"));
 		$('#popup-error').popup( "open");
 	 });
+	 */
   }]);
 
 taagamControllers.controller('CtgryItemsCtrl', ['$scope', '$routeParams', '$http',
