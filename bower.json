@@ -11,6 +11,11 @@
     "jquery": "1.10.2",
     "bootstrap": "~3.1.1",
     "angular-route": "~1.2.x",
-	"angular-resource": "~1.2.x"
+	"angular-resource": "~1.2.x",
+	"angular-sanitize": "1.2.0",
+	"angular-translate": "2.4.2",
+	"angular-underscore-module": "~1.0.x",
+	"angular-pull-to-refresh": "0.3.0",
+	"ngActivityIndicator":"0.1.10"
   }
 }

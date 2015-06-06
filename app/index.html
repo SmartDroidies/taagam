@@ -3,42 +3,28 @@
 <head>
   <meta charset="utf-8">
   <title class="i18n" id="app.title">Tamil Taagam</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="js/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="js/angular-snap/angular-snap.css">
+  <link rel="stylesheet" href="js/snapjs/snap.css">
   <link rel="stylesheet" href="css/taagam.css">
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/jquery/jquery.min.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="js/jquery-i18n-properties/jquery.i18n.properties.js"></script>  
+  <script src="js/angular/angular.min.js"></script>
+  <script src="js/angular-route/angular-route.min.js"></script>
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/angular-resource/angular-resource.min.js"></script>    
+  <script src="js/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="js/angular-touch/angular-touch.min.js"></script>
+  <script src="js/angular-translate/angular-translate.min.js"></script>
+  <script src="js/snapjs/snap.min.js"></script>
+  <script src="js/angular-snap/angular-snap.min.js"></script>
+  <script src="js/jquery-i18n-properties/jquery.i18n.properties.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova.js"></script>  
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/services.js"></script>  
   <script src="js/taagam.js"></script>		
+  <script src="js/filters.js"></script>		
+  <script src="js/notify.js"></script>
 </head>
-<body>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-		<div class="navbar-header">
-			<img alt="Tamil Taagam" src="images/taagam.png" class="navbar-brand app-logo"/> 
-			<a id="head.title" class="navbar-brand app-head i18n"><h2>Tamil Taagam</h2></a>
-        </div>
-      </div>
-    </nav>
-	<div class="container-fluid content">
-		<div id="loadingWidget" class="row-fluid ui-corner-all">
-			<div class="loadingContent">
-				<img alt="Loading  Content" src="images/ajax-loader.gif" /> 
-			</div>
-		</div>
-		<div id="popup-error" class="row-fluid ui-corner-all error">
-			<p id="popup-content" class="error-content"></p>
-		</div>				
-	</div>	
-	<div ng-view class="container-fluid"></div>
-	<!--div class="footer">
-      <div class="container-fluid content">
-        <p class="text-muted">SmartDroidies</p>
-      </div>
-    </div-->	
+<body ng-view>
 </body>
 </html>

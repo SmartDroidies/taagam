@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+	<div class="navbar-header">
+		<img alt="Tamil Taagam" src="images/taagam.png" class="navbar-brand app-logo"/> 
+		<h3 class="app-head">{{ 'TITLE' | translate }}</h3>
+	</div>
+  </div>
+</nav>
+<div class="container-fluid content">
+	<div id="loadingWidget" class="row-fluid ui-corner-all">
+		<div class="loadingContent">
+			<img alt="Loading  Content" src="images/ajax-loader.gif" /> 
+		</div>
+	</div>
+	<div id="popup-error" class="row-fluid ui-corner-all error">
+		<p id="popup-content" class="error-content"></p>
+	</div>				
+</div>	
+<div id="app-status-div">
+	<ul id="app-status-ul">
+		<li>Cordova PushNotification Plugin Demo</li>
+	</ul>
+</div>
+<div class="article-list">
+	<!--Body content-->
+	<div class="article-section" ng-repeat="article in articles">
+		<a href="#/article/{{$index + 1}}" class="list-group-item article-item">
+			<div id="article-snippet">
+				<span class="article-list-date">{{article.publishedDate |  todate}}</span> 
+				<h4 class="list-group-item-heading">{{article.title}}</h4>
+				<p ng-bind-html="article.contentSnippet" class="list-group-item-text" ></p>
+				<!--span class="article-category">{{article.categories}}</span--> 
+			</div>	
+			<!--div id="feed-icon">	
+				<p ng-bind-html="feed.content | feedicon" class="list-group-item-text" ></p>
+			</div-->	
+		</a>
+	</div>	
+</div>
+<div class="footer">
+  <div class="container-fluid content">
+  </div>
+</div>	
+
+
